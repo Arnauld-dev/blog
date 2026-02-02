@@ -19,14 +19,18 @@ if(!$article){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="article">
     <a href="index.php">Retour </a>
     <h1><?php echo htmlspecialchars($article['titre']); ?></h1>
     <p>Publié le : <?php echo $article['date_publication']; ?></p>
-    <div>
+    
         <?php echo htmlspecialchars($article['contenu']); ?>
+    </div>
+
 </body>
 </html>
 

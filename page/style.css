@@ -49,3 +49,18 @@ button{
     padding: 5px 10px;
     border-radius: 5px;
 }
+.link:hover{
+    background-color: #45c4c9;
+    color: white;
+}
+.article{
+    width: 800px;
+    padding: 50px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    margin: auto;
+    
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    height: auto;
+}
