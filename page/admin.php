@@ -1,4 +1,5 @@
 <?php
+session_start();
 try{
     $db = new PDO('mysql:host=localhost;dbname=database;charset=utf8', 'root', '');
 }catch(Exception $e){

@@ -9,7 +9,7 @@ if(isset($_pOST['UserName'])&& isset($_POST['Password'])){
     $valid_password = '123';
      
       if($username === $valid_username && $password === $valid_password){
-        $_SESSION['login'] = true;
+        $_SESSION['login'] = $valid_password;
         header('Location: admin.php');
         exit();
        }else{
