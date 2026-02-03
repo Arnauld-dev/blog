@@ -34,11 +34,6 @@ CREATE TABLE `articles` (
   `date_publication` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
-INSERT INTO `articles` (`id`, `titre`, `contenu`, `date_publication`) VALUES
-(1, 'Premier article', 'Ceci est le contenu du premier article.', '2026-02-01 10:00:00'),
-(2, 'Deuxième article', 'Ceci est le contenu du deuxième article.', '2026-02-02 11:30:00'),
-(3, 'Troisième article', 'Ceci est le contenu du troisième article.', '2026-02-03 14:15:00');
 --
 -- Index pour les tables déchargées
 --

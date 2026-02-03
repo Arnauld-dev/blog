@@ -26,7 +26,7 @@ if(!empty($_POST['titre'])||!empty($_POST['contenu'])){
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="admin">
-    <a href="index.php">retour</a>
+    <a href="deconnect.php">Deconnexion</a>
     <h1 >Page d'administration</h1>
     
     <form action="" method="post">
@@ -49,6 +49,7 @@ if(!empty($_POST['titre'])||!empty($_POST['contenu'])){
         <li><?php echo htmlspecialchars($article['titre']); ?></li>
         <a href="edit.php?id=<?php echo $article['id']; ?>">Modifier</a>
         <a href="delete.php?id=<?php echo $article['id']; ?>">Supprimer</a>
+        
     </ul>
       
         

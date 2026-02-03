@@ -20,7 +20,7 @@ $articles = $requete->fetchAll();
 </head>
 <body class="index">
     <h1>Bienvenu sur mon blog</h1>
-    <a href="admin.php">admin</a>
+    <a href="login.php">admin</a>
     <?php  foreach($articles as $article): ?>
         <article>
        <h2><?php echo htmlspecialchars($article['titre']); ?></h2>
