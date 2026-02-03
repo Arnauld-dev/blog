@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION['login'])){
+    header('Location: login.php');
+    exit();
+};
 try{
     $db = new PDO('mysql:host=localhost;dbname=database;charset=utf8', 'root', '');
 }catch(Exception $e){

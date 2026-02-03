@@ -1,26 +1,19 @@
 <?php
 session_start();
-if(isset($_pOST['UserName'])&& isset($_POST['Password'])){
-    if(!empty($_POST['UserName']) || !empty($_POST['Password'])){
-    $username = $_POST['UserName'];
-    $password = $_POST['Password'];
-    //valide login for admin
-    $valid_username = 'admin';
-    $valid_password = '123';
-     
-      if($username === $valid_username && $password === $valid_password){
-        $_SESSION['login'] = $valid_password;
+if(isset($_SESSION['login'])){
+    header('Location: admin.php');
+    exit();
+};
+if(!empty($_POST['UserName'])&&!empty($_POST['Password'])){
+    $username= $_POST['UserName'];
+    $password= $_POST['Password'];
+    if($username==='aime' && $password==='password123'){
+        $_SESSION['login']= $username;
         header('Location: admin.php');
         exit();
-       }else{
-        echo 'Nom d\'utilisateur ou mot de passe incorrect.';
-        };
-
-        
     }else{
-        echo 'Veuillez remplir tous les champs.';
-    };
-    
+        echo 'Identifiants incorrects';
+    }
 };
 ?>
 
@@ -30,6 +23,7 @@ if(isset($_pOST['UserName'])&& isset($_POST['Password'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
     <title>Document</title>
 </head>
 <body>
@@ -39,6 +33,8 @@ if(isset($_pOST['UserName'])&& isset($_POST['Password'])){
     <label for="password">Password</label>
     <input type="password" name="Password" id="Password">
     <button type="submit">Se connecter</button>
+    <a href="index.php">Return home</a>
     </form>
+    
 </body>
 </html>

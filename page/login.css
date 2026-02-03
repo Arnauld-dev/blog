@@ -1,0 +1,29 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 400px;
+    height: 50vh;
+    padding-top: 50px;
+    margin-top: 70px;
+}
+input[type="text"], input[type="password"]{
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+}
+button{
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
